@@ -1,10 +1,25 @@
 {
-	"Rule":{
-		"Docs":{
-			"View":"",
-			"Controler":"",
-			"Data":"",
-			"Output":""
-		}
-	}
+	"_Rule":[{
+		"Name":"Docs",
+		"View":"docs.ejs",
+		"Data":"./docs",
+		"Controller":"detail"
+	},{
+		"Name":"Api",
+		"View":"api.ejs",
+		"Data":"./api",
+		"Controller":"detail"
+	}],
+	"Nav":{
+		"Docs":"../docs/get-start.html",
+		"Api":"../api/ash.html"
+	},	
+	"Source_css":"./css/",
+	"Source_js":"./js/",
+	"Source_img":"./img/",
+	"Source_img_atricle":"./data_img/",
+	"filename":"./_view/controls",
+	"_Path_ViewFolder":"./_view/",
+	"_Path_DataFolder":"./_data/",
+	"_Path_OutputFolder":"./"
 }
