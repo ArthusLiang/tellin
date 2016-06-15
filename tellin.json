@@ -4,23 +4,10 @@
 		"View":"docs.ejs",
 		"Data":"./docs",
 		"Controller":"detail"
-	},{
-		"Name":"Docs_List",
-		"View":"list.ejs",
-		"Data":"./docs",
-		"Controller":"list"
-	},{
-		"Name":"Api",
-		"View":"api.ejs",
-		"Data":"./api",
-		"Controller":"detail"
 	}],
 	"Nav":{
-		"Docs":"../docs/get-start.html",
-		"Api":"../api/ash.html"
+		"Docs":"../docs/get-start.html"
 	},
-	"_page_item_num":1,
-	"_page_btn_num":3,	
 	"Source_css":"./css/",
 	"Source_js":"./js/",
 	"Source_img":"./img/",
