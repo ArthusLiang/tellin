@@ -48,12 +48,16 @@ td,th{border:1px solid #ccc; padding: 0 14px;}
 .demo_btn{display: inline-block; padding: 10px 20px; text-align: center; color: white; border-radius: 4px; background-color: #03A9F4; cursor: pointer;}
 .demo_btn:hover{ background-color: #0288D1; }
 
-.pagination{width: 100%; height: 40px; line-height: 40px; margin: 40px 0 40px 0; position: relative;}
-.pagination a{display: inline-block; height: 30px; line-height: 30px; color: #1E88E5; margin-left: 7px;}
-.pagination .current,.pagination a:hover{color: #1E88E5;text-decoration: underline; }
+.pagination{width: 80%; height: 40px; line-height: 40px; margin: 40px auto; position: relative;}
+.pagination a{display: inline-block; height: 30px; line-height: 30px; color: #757575; margin-left: 14px;text-decoration: underline; }
+.pagination .current,.pagination a:hover{color: #1E88E5;text-decoration: none; }
 .pagination .prev,.pagination .next{position: absolute; top: 0px; font-size: 16px;font-style:italic; }
 .pagination .prev{left: -20px;}
 .pagination .next{right:-20px;}
 
+.list_item{margin: 40px auto; cursor: pointer; width: 80%;  border-bottom: 1px solid #EEEEEE; display: block;}
+.list_item h1{font-weight:normal; font-size:20px; color: #212121; }
+.list_item p{margin-top:20px; font-size: 14px; color: #757575;}
+.list_item .list_item_footer{margin-bottom: 10px;}
 
 

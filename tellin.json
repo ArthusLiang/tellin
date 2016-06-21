@@ -4,10 +4,18 @@
 		"View":"docs.ejs",
 		"Data":"./docs",
 		"Controller":"detail"
+	},{
+		"Name":"Docs_List",
+		"View":"list.ejs",
+		"Data":"./docs",
+		"Controller":"list"
 	}],
 	"Nav":{
-		"Docs":"../docs/get-start.html"
+		"Docs":"../docs/index.html"
 	},
+	"_page_item_num":5,
+	"_page_btn_num":5,
+	"_page_for_index":true,	
 	"Source_css":"./css/",
 	"Source_js":"./js/",
 	"Source_img":"./img/",
