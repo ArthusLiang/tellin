@@ -15,7 +15,7 @@
 	},
 	"_page_item_num":10,
 	"_page_btn_num":10,	
-	"_page_for_index":false,
+	"_page_for_index":true,
 	"Source_css":"./css/",
 	"Source_js":"./js/",
 	"Source_img":"./img/",
