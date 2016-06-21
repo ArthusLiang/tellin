@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  		<%- include('controls/head') %>
+  </head>
+  <body>
+  		<%- include('controls/header') %>
+      	<div class='container'>
+          	<div class='main'>
+          		<% for(var i in List){ %>
+                <h1><%= List[i].RenderData.Title %></h1>
+                <p><%= List[i].RenderData.Desc %></p>
+                <p><%= List[i].RenderData.Date %></p>
+              <% } %> 
+              <div>
+                <%- PageFirst %><%- PagePre %><%- PageGroup %><%- PageNext %><%- PageLast %>
+              </div>   	
+          	</div>
+      	</div>	
+      <%- include('controls/footer') %>
+  </body>
+</html>

@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 'use strict';
 
 var getArgs = function(arg,cmd) {
@@ -12,8 +11,8 @@ var getArgs = function(arg,cmd) {
 var args = getArgs(process.argv,'tellin');
 
 if(args && args.length && args.length>0 && args[0]==='init'){
-	require('tellin_init').init();
+	require('../lib/tellin_init').init();
 	//require('../lib/tellin_init').init();
 }else{
-	require('tellin').generate();
+	require('../lib/tellin').generate();
 }
