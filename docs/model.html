@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  		<title>Model | Ash - docs</title>
+<meta charset='utf-8'>
+<link rel="icon" type="image/x-icon" href="../img/fav.ico">
+<meta name="viewport" content="width=device-width,minimal-ui"  >
+<meta name="keywords" content="Jsonic,javascript,html5,web audio,前端框架" />
+<meta name="description" content="A javascript framework named Jsonic. Make user experience on sound more wonderful." />
+<link rel="stylesheet" type="text/css" href="../css/public.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../css/github_gist.css" media="screen">
+<script type="text/javascript" src="../js/jquery-2.0.0.min.js"></script>
+<script type="text/javascript" src="../js/ash.js"></script>
+<script type="text/javascript" src="../js/highlight.pack.js"></script>
+<style type="text/css"></style>
+<script type="text/javascript">
+$(function(){
+});
+</script>
+  </head>
+  <body>
+  		<nav class='nav'>
+	<a class=current href='../docs/index.html' >Docs</a>
+</nav>
+<div class='board'></div>
+      	<div class='container'>
+      		<aside class='aside'>
+	
+		<a   href='get-start.html'>Get Start</a>
+	
+		<a class=current  href='model.html'>Model</a>
+	
+		<a   href='view.html'>View</a>
+	
+		<a   href='controller.html'>Controller</a>
+	
+		<a   href='config.html'>Config</a>
+	
+</aside>
+          	<div class='main'>
+          		<article class='article'>
+	<header class='article_header'>
+		<h1>Model</h1>
+	</header>
+	<div class='article_body'>
+		<p>#1.Markdown File</p>
+<p>Markdown files are used as the main content of website. Each markdown file can contain a yaml header, tellin.js will use its data when rendering the detail page.</p>
+<h2 id="yaml-header">yaml header</h2>
+<p>Yaml is a popular language and you can know about the yaml from <a href="http://www.yaml.org/" title="yaml">here</a>. Tellin.js uses <a href="https://github.com/nodeca/js-yaml" title="js-yaml">js-yaml</a> to parse yaml header. The following are some properities which are used in tellin&#39;s default controller.</p>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th style="text-align:left">default</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Title</td>
+<td style="text-align:left">File Name</td>
+<td>Title in RenderData</td>
+</tr>
+<tr>
+<td>Desc</td>
+<td style="text-align:left">The first paragraph</td>
+<td>A summary of the article</td>
+</tr>
+<tr>
+<td>SortIndex</td>
+<td style="text-align:left">No</td>
+<td>Sort index</td>
+</tr>
+<tr>
+<td>Date</td>
+<td style="text-align:left">file&#39;s create date</td>
+<td>When the article is published</td>
+</tr>
+</tbody>
+</table>
+<p>You can use all the yaml properities in RenderData[name].</p>
+<p>eg:</p>
+<pre><code>&lt;h1&gt;&lt;%= RenderData.Title %&gt;&lt;/h1&gt;
+</code></pre><p>#2.Config</p>
+<p>The config files should be <strong>tellin.json</strong> under the root of the project folder. The following is its default value.</p>
+<pre><code>{
+    &quot;_Rule&quot;:[{
+        &quot;Name&quot;:&quot;Docs&quot;,
+        &quot;View&quot;:&quot;docs.ejs&quot;,
+        &quot;Data&quot;:&quot;./docs&quot;,
+        &quot;Controller&quot;:&quot;detail&quot;
+    },{
+        &quot;Name&quot;:&quot;Docs_List&quot;,
+        &quot;View&quot;:&quot;list.ejs&quot;,
+        &quot;Data&quot;:&quot;./docs&quot;,
+        &quot;Controller&quot;:&quot;list&quot;
+    }],
+    &quot;Nav&quot;:{
+        &quot;Docs&quot;:&quot;../docs/&quot;
+    },
+    &quot;_page_item_num&quot;:10,
+    &quot;_page_btn_num&quot;:10,    
+    &quot;_page_for_index&quot;:true,
+    &quot;Source_css&quot;:&quot;./css/&quot;,
+    &quot;Source_js&quot;:&quot;./js/&quot;,
+    &quot;Source_img&quot;:&quot;./img/&quot;,
+    &quot;Source_img_atricle&quot;:&quot;./img_data/&quot;,
+    &quot;filename&quot;:&quot;./_view/controls&quot;,
+    &quot;_Path_ViewFolder&quot;:&quot;./_view/&quot;,
+    &quot;_Path_DataFolder&quot;:&quot;./_data/&quot;,
+    &quot;_Path_OutputFolder&quot;:&quot;./&quot;
+}
+</code></pre><p>The property whose name is start with &#39;_&#39; is used for some rendering rule. The other properties will be merged into rendering data.</p>
+<h3 id="_rule">_Rule</h3>
+<p>You can define the way to generate HTML page in <strong>_Rule</strong>. </p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Name</td>
+<td style="text-align:left">-</td>
+</tr>
+<tr>
+<td>View</td>
+<td style="text-align:left">Ejs template</td>
+</tr>
+<tr>
+<td>Data</td>
+<td style="text-align:left">Where you put your markdown files. Tellin will loop the folder</td>
+</tr>
+<tr>
+<td>Controller</td>
+<td style="text-align:left">The controller module.</td>
+</tr>
+</tbody>
+</table>
+<p>View&#39;s value should be a file path under &#39;./_view&#39;.（change the root path in _Path_ViewFolder）</p>
+<p>Data&#39;s value should be a folder path under &#39;./_data&#39;.（change the root path in _Path_DataFolder）</p>
+<p>Controller&#39;s value should be a file name under &#39;./_controller&#39; or a key words(&#39;list&#39;,&#39;detail&#39;).（change the root path in _Path_ViewFolder）</p>
+<h3 id="source_css">Source_css</h3>
+<p>The folder you put the css files.</p>
+<h3 id="source_js">Source_js</h3>
+<p>The folder you put the js files.</p>
+<h3 id="source_img">Source_img</h3>
+<p>The folder you put the images for website.</p>
+<h3 id="source_img_atricle">Source_img_atricle</h3>
+<p>The folder you put the images for markdown files.</p>
+<p>#3.List
+Tellin&#39;s default controller will generate a list of markdown files.</p>
+		
+	</div>
+	<footer class='article_footer'>
+		<div class="pagination">
+			<a  class="prev" href="get-start.html">← Prev</a>
+			<a  class="next" href="view.html">Next →</a> 	 	
+		</div>		
+	</footer>
+</article>
+       	
+          	</div>
+      	</div>	
+      <footer class='copyright'>
+	<p>©2015-2016 <a target="_blank" href="https://en.wikipedia.org/wiki/MIT_License" class='license'>MIT license</a></p>
+</footer>
+<script type="text/javascript">hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>

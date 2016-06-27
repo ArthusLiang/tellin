@@ -13,21 +13,26 @@ $ npm -g install tellin
 
 # Usage
 
-## 1. Make your own template
-
-Tellin uses Ejs as the template engine. You can visit [here](http://www.embeddedjs.com/) for more information.
-
-## 2. Write your article
-
-Put your own article under the folder '_data'
-
-## 3. Configuration
-
-Create a configuration file under the your project folder. Tellin will generate html files according to it.
-
-## 4. Generate the website
+## 1.Init your the project
+You can use the following command to init the folder. Otherwise you can also create files by self.
 
 ```
-$ cd yourFolderName
+$ cd yourFolder
+$ tellin init
+```
+
+## 2.Write your atricle
+Pur your .MD files in the folder ```./_data/doc```
+
+Each markdown file can contain a yaml header. Tellin.js will use its data when rendering.
+
+## 3.Generate WebSite
+After you perpare the data, you can excute the following command to generate your website. You can upload the folder to your server and check your web page.
+
+```
 $ tellin
 ```
+
+# MVC
+
+Tellin.js is based on MVC model. You can not only write the .MD files but also customize every part of MVC. Please view other documents for the detail.

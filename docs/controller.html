@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-  		<title>Get Start | Ash - docs</title>
+  		<title>Controller | Ash - docs</title>
 <meta charset='utf-8'>
 <link rel="icon" type="image/x-icon" href="../img/fav.ico">
 <meta name="viewport" content="width=device-width,minimal-ui"  >
@@ -26,13 +26,13 @@ $(function(){
       	<div class='container'>
       		<aside class='aside'>
 	
-		<a class=current  href='get-start.html'>Get Start</a>
+		<a   href='get-start.html'>Get Start</a>
 	
 		<a   href='model.html'>Model</a>
 	
 		<a   href='view.html'>View</a>
 	
-		<a   href='controller.html'>Controller</a>
+		<a class=current  href='controller.html'>Controller</a>
 	
 		<a   href='config.html'>Config</a>
 	
@@ -40,31 +40,26 @@ $(function(){
           	<div class='main'>
           		<article class='article'>
 	<header class='article_header'>
-		<h1>Get Start</h1>
+		<h1>Controller</h1>
 	</header>
 	<div class='article_body'>
-		<p>Tellin is a node.js based library which help you to generate static website. Before I decided to write tellin.js, I tried to find some similar tools. I think they are prefect for writers, but it&#39;s hard for me to customize Css, Html and the other thins. I think tellin.js is created more for people who want to decorate their own static web site.</p>
-<h1 id="intallation">Intallation</h1>
-<pre><code>$ npm -g install tellin
-</code></pre><h1 id="usage">Usage</h1>
-<h2 id="1-init-your-the-project">1.Init your the project</h2>
-<p>You can use the following command to init the folder. Otherwise you can also create files by self.</p>
-<pre><code>$ cd yourFolder
-$ tellin init
-</code></pre><h2 id="2-write-your-atricle">2.Write your atricle</h2>
-<p>Pur your .MD files in the folder <code>./_data/doc</code></p>
-<p>Each markdown file can contain a yaml header. Tellin.js will use its data when rendering.</p>
-<h2 id="3-generate-website">3.Generate WebSite</h2>
-<p>After you perpare the data, you can excute the following command to generate your website. You can upload the folder to your server and check your web page.</p>
-<pre><code>$ tellin
-</code></pre><h1 id="mvc">MVC</h1>
-<p>Tellin.js is based on MVC model. You can not only write the .MD files but also customize every part of MVC. Please view other documents for the detail.</p>
+		<h1 id="controller">Controller</h1>
+<p>Controller is a very important part of tellin.js. You can put the core logic to generate files here. Telli.js now has 2 default controllers which use the key words &#39;list&#39; and &#39;detail&#39;.</p>
+<h2 id="use-controller">use controller</h2>
+<p>1.To use the default controllers, you just need set the controller of _Rule to the keywords.</p>
+<p>2.If you want to use your own controllers, put them under &#39;./_controller&#39; and set the controller of _Rule to their full name(with extension);</p>
+<h2 id="detail">detail</h2>
+<p>This controller will generate for every markdown files. </p>
+<h2 id="list">list</h2>
+<p>This controller will generate list pages for each folder.</p>
+<h2 id="demo-generator">demo generator</h2>
+<p>If you add some remark to the code in the markdown files, tellin.js will generate some real demo in the pages.</p>
 		
 	</div>
 	<footer class='article_footer'>
 		<div class="pagination">
-			
-			<a  class="next" href="model.html">Next →</a> 	 	
+			<a  class="prev" href="view.html">← Prev</a>
+			<a  class="next" href="config.html">Next →</a> 	 	
 		</div>		
 	</footer>
 </article>
