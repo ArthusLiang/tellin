@@ -23,5 +23,6 @@
 	"filename":"./_view/controls",
 	"_Path_ViewFolder":"./_view/",
 	"_Path_DataFolder":"./_data/",
+	"_Path_ControllerFolder":"./_controller/",
 	"_Path_OutputFolder":"./"
 }

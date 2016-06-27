@@ -1,6 +1,6 @@
 {
   "name": "tellin",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "a static site generator",
   "main": "./lib/tellin.js",
   "bin": {
