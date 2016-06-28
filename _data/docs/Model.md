@@ -3,7 +3,7 @@ Desc: Markdown files are used as the main content of website. Each markdown file
 SortIndex: 2
 ---
 
-#1.Markdown File
+# 1.Markdown File
 
 Markdown files are used as the main content of website. Each markdown file can contain a yaml header, tellin.js will use its data when rendering the detail page.
 
@@ -26,7 +26,7 @@ eg:
 <h1><%= RenderData.Title %></h1>
 ```
 
-#2.Config
+# 2.Config
 
 The config files should be **tellin.json** under the root of the project folder. The following is its default value.
 
@@ -91,5 +91,5 @@ The folder you put the images for website.
 ### Source_img_atricle
 The folder you put the images for markdown files.
 
-#3.List
+# 3.List
 Tellin's default controller will generate a list of markdown files.
