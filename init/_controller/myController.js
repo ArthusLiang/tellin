@@ -1,7 +1,7 @@
 'use strict';
 
 var fs = require("fs");
-var ejs = require('ejs');
+//var ejs = require('ejs');
 
 var myController = function(config,rule,data,view){
 
